@@ -8,7 +8,12 @@
 {% if videos_list %}
 <ul>
     {% for video in videos_list %}
-    <li>{{ video.name }}<img src={{ video.url }}></li>
+    <li>
+            {{ video.name }}
+        <video width="530" height="440" controls >
+            <source src={{ video.url }} type="video/mp4"></source>
+        </video>
+    </li>
     {% endfor %}
 </ul>
 {% endif %}

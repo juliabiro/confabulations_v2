@@ -48,7 +48,7 @@ def storyView(request, story_id):
                    'name': participant.name,
                    'id': participant.id
                },
-               'analysis':analysis 
+               'analysis':analysis
     }
     return render(request, 'confabulation/storyView.html', context)
 
