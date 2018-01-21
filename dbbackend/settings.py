@@ -80,8 +80,8 @@ db_from_env = dj_database_url.config()
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres_v2',
-        'USER': 'postgres_v2',
+        'NAME': 'postgres',
+        'USER': 'postgres',
         'HOST': 'db',
         'PORT': 5432,
     }

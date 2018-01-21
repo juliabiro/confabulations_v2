@@ -20,6 +20,10 @@ class AnalysisPointInline(admin.StackedInline):
     model=AnalysisPoint
     extra = 0
 
+class EraInline(admin.StackedInline):
+    model=Era
+    extra = 0
+
 class ThemeInline(admin.StackedInline):
     model = Theme
     extra = 2
@@ -64,6 +68,9 @@ class AnalysisTypeAdmin(admin.ModelAdmin):
 class AnalysisPointAdmin(admin.ModelAdmin):
     list_display = ['name', 'color_code']
 
+class EraAdmin(admin.ModelAdmin):
+    list_display = ['name', 'color_code']
+
 class ThemeAdmin(admin.ModelAdmin):
     list_display = ['name']
     inlines=[StoryInThemeInline]
@@ -83,3 +90,4 @@ admin.site.register(AnalysisType, AnalysisTypeAdmin)
 admin.site.register(Story, StoryAdmin)
 admin.site.register(Theme, ThemeAdmin)
 admin.site.register(Chain, ChainAdmin)
+admin.site.register(Era, EraAdmin)
